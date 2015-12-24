@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Styles/StyleSheet.css" rel="Stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="content">
+    <div class="header">
+           Kemrock Industries &amp; Exports Ltd.
+    </div>
+    
+    <div id="body_bg">
+        <div id="inner_bg">
+    <!-- link part -->
+            <div id="content_left">
+                <div class="content_left_section">
+                    <h1>
+                        Administrator</h1>
+                    <ul>
+                        <li><a href="UserCreation.aspx">User Creation</a></li>
+                        <li><a href="cnc_machine_master.aspx">Machine Master</a></li>
+                        <li><a href="OperatorMaster.aspx">Operator Master</a></li>
+                        <li><a href="DepartmentMaster.aspx">Department Master</a></li>
+                    </ul>
+                </div>
+                <div class="content_left_section">
+                    <h1>
+                        Work Log</h1>
+                    <ul>
+                        <li><a href="ViewLog.aspx">View</a></li>
+                        <li><a href="UploadPic.aspx">Upload/Delete Documents</a></li>
+                        <li><a href="History.aspx">History</a></li>
+                        <li><a href="CompletedLog.aspx">Completed</a></li>
+                    </ul>
+                </div>
+                <div class="content_left_section">
+                    <h1>Reports</h1>
+                    <ul>
+                        <li><a href="">Monthly Report</a></li>
+                        <li><a href="">Department Wise Report</a></li>
+                    </ul>
+                </div>
+                <div class="content_left_section">
+                    <h1><a href="MachineCostDetail.aspx">Machine Costing Details</a></h1>
+                    <h1><a href="ChangePassword.aspx">Change Password</a></h1>
+                    <h1><a href="../LogOut.aspx">Log Out</a></h1>
+                </div>
+            </div>
+           
+       <!-- detail part -->     
+           
+            <div id="content_right">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+    </form>
+</body>
+</html>
